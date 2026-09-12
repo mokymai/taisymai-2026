@@ -1,0 +1,116 @@
+name: Netikslumas skaidrėse
+description: Pranešimas apie netikslumą skaidrėse.
+title: "P__-_ (v1.0) sk._: netikslumas → taisymas (esmė)"
+labels: ["Naujas :new:", "Vieta: skaidrės :orange_book:"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+          Temos **pavadinime** apibūdinkite netikslumo esmę, kuri padėtų **kitiems** skaitytojams **greitai susiorientuoti**, kad apie šį netikslumą jau pranešta.
+
+          1. Nurodykite skaidrių bloko kodą (pvz., `P01-4`), versiją (`v1.0`) ir skaidrės numerį (pvz., `sk.14` ar `sk.1,5`, jei kelios);
+          2. Temos pavadinime apibūdinkite netikslumo esmę. Kai galima, tokiu formatu: `netikslumas → taisymas (esmė)`.
+          Pvz.:  
+          „`P01-4 (v1.0) sk.14: kopppiuteris → kompiuteris (rašyba)`“  
+          „`P11-1 (v2.1) sk.1,5: praleistas žodis "tačiau"`“
+  - type: input
+    id: slide-block
+    attributes:
+      label: Skaidrių bloko kodas
+      placeholder: P01-4
+    validations:
+      required: true
+  - type: input
+    id: slide-version
+    attributes:
+      label: Skaidrių bloko versija
+      description: Jei versija nenurodyta, įrašykite v1.0.
+      placeholder: v1.0
+    validations:
+      required: true
+  - type: input
+    id: slide-number
+    attributes:
+      label: Skaidrės numeris
+      description: Jei netikslumas yra keliose skaidrėse, numerius atskirkite kableliais.
+      placeholder: 14 arba 1, 5
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Ekrano nuotrauka su pažymėtais netikslumais
+      description: Įkelkite vieną ar kelias ekrano nuotraukas („Screenshot“) su pažymėtais netikslumais. Galite įklijuoti paspausdami Ctrl+V.
+    validations:
+      required: true
+  - type: dropdown
+    id: error-type
+    attributes:
+      label: Netikslumo tipas
+      description: Pasirinkite vieną ar kelis.
+      multiple: true
+      options:
+        - rašyba (praleista raidė ar kt.)
+        - gramatika (nesuderinti linksniai ar kt.)
+        - praleistas žodis 
+        - pasikartojimas (pasikartojantis žodis ar frazė)
+        - skaičiavimo klaida
+        - numeracijos klaida
+        - fakto klaida
+        - netinkamas terminas
+        - skyryba
+        - stilius
+        - kita
+    validations:
+      required: true
+  - type: input
+    id: error-with-context
+    attributes:
+      label: Netikslumo tekstas su keliais žodžiais aplinkui
+      description: To reikia greitai paieškai dokumente.
+  - type: input
+    id: error
+    attributes:
+      label: Netikslumo tekstas
+  - type: input
+    id: correction
+    attributes:
+      label: Siūlomas taisymo tekstas
+  - type: textarea
+    id: comment
+    attributes:
+      label: Komentaras
+      description: Jei reikia, pateikite papildomos informacijos.
+  - type: dropdown
+    id: course
+    attributes:
+      label: Dalykas
+      options:
+        - BS-2026
+        - kitas
+      default: 0
+    validations:
+      required: true
+  - type: dropdown
+    id: teacher
+    attributes:
+      label: Dėstytojas
+      options:
+        - Vilmantas
+        - Rimantė
+        - Justinas
+        - Vita
+        - kitas
+      default: 0
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Patvirtinimas
+      options:
+        - label: Temos pavadinime nurodžiau skaidrių bloko kodą, versiją ir skaidrės numerį.
+          required: true
+        - label: Temos pavadinime nurodžiau konkrečios problemos esmę.
+          required: true
+        - label: "Apie šią problemą dar niekas nėra pranešęs: esu pirmasis/pirmoji."
