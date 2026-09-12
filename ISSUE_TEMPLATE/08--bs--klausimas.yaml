@@ -1,0 +1,42 @@
+name: Klausimas
+description: Klausimas dėstytojui
+title: "[?]: Klausimo esmė"
+labels: ["question :question:"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+          Pavadinime po „`[?]`“ įrašykite klausimo esmę.
+  - type: dropdown
+    id: course
+    attributes:
+      label: Dalykas
+      description: |
+        Pasirinkite, kurį kursą klausote:
+        - BS-2026, jei jūsų klausomas kursas yra „Biostatistika";
+      options:
+        - BS-2026
+        - kitas
+      default: 0
+    validations:
+      required: true
+  - type: dropdown
+    id: teacher
+    attributes:
+      label: Dėstytojas
+      options:
+        - Vilmantas
+        - Rimantė
+        - Justinas
+        - Vita
+        - kitas
+      default: 0
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Klausimas
+      description: Užduokite savo klausimą.
+    validations:
+      required: true
