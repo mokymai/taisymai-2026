@@ -1,4 +1,4 @@
-name: 07-Netikslumas teste [Vilmanto]
+name: 05-Netikslumas teste [Vilmanto]
 description: "Informacijos forma. Apie testo klausimą ar netikslumą kreipkitės tiesiai į dėstytoją per „Teams“."
 title: '[testas] Netikslumas (žinutę siųsiu dėstytojui)'
 labels: ["Naujas :new:", "Vieta: testai :test_tube:"]
@@ -14,7 +14,8 @@ body:
           Šio šablono nepildykite.
 
           Pateikite:
-          1. internetinę klausimo nuorodą (URL) arba testo numerį ir tikslų klausimo tekstą;
+          1. arba internetinę klausimo nuorodą (URL) - rekomenduojama
+          2. arba testo numerį ir tikslų klausimo tekstą;
           3. ekrano nuotrauką su pažymėta vieta;
           4. netikslų tekstą ir, jei įmanoma, siūlomą taisymą;
           5. trumpą paaiškinimą, jei reikia.
