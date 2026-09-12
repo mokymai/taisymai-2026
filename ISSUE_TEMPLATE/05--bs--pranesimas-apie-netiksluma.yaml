@@ -1,0 +1,112 @@
+name: Netikslumas kitoje vietoje
+description: Netikslumai mokomojoje medžiagoje ir siūlomi taisymai
+title: "[vieta] netikslumas → taisymas (netikslumo esmė)"
+labels: ["Naujas :new:"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+          **Apie netikslumus TESTUOSE rašykite tiesiai dėstytojui per „Teams“**
+
+          ---
+
+          Temos **pavadinime** apibūdinkite netikslumo esmę, kuri padėtų **kitiems** skaitytojams **greitai susiorientuoti**, kad apie šį netikslumą jau pranešta.
+
+          1. Parašykite, kur yra netikslumas: „`[Video]`", jei video medžiagoje; „`[YouTube]`", jei video aprašyme; „`[Straipsnis]`", jei papildomai duoto straipsnio komentaruose; ...
+          2. Apibūdinkite netikslumo esmę. Jei galima, tokiu formatu: netikslumas → taisymas;
+          Pvz.:
+          „[Straipsnis] kopppiuteris → kompiuteris"
+          „[YouTube] praleistas žodis "tačiau""
+  - type: dropdown
+    id: course
+    attributes:
+      label: Dalykas
+      description: |
+        Pasirinkite, kurį kursą klausote:
+        - BS-2026, jei jūsų klausomas kursas yra „Biostatistika“.
+      options:
+        - BS-2026
+        - kitas
+      default: 0
+    validations:
+      required: true
+  - type: input
+    id: place
+    attributes:
+      label: Netikslumo vieta
+      description: Kur radote netikslumą (pvz., Video, YouTube, Straipsnis ir pan.)
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Bylos pavadinimas ar nuoroda (URL)
+      description: Tiksli nuoroda arba bylos pavadinimas
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Ekrano nuotrauka su pažymėtais netikslumais
+      description: Įkelkite vieną ar kelias ekrano nuotraukas („Screenshot“) su pažymėtais netikslumais. Galite įklijuoti paspausdami Ctrl+V.
+    validations:
+      required: true
+  - type: dropdown
+    id: error-type
+    attributes:
+      label: Netikslumo tipas
+      description: Pasirinkite vieną ar kelis.
+      multiple: true
+      options:
+        - rašyba (praleista raidė ar kt.)
+        - gramatika (nesuderinti linksniai ar kt.)
+        - praleistas žodis 
+        - pasikartojimas (pasikartojantis žodis ar frazė)
+        - skaičiavimo klaida
+        - numeracijos klaida
+        - fakto klaida
+        - netinkamas terminas
+        - skyryba
+        - stilius
+        - kita
+    validations:
+      required: true
+  - type: input
+    id: error-with-context
+    attributes:
+      label: Nukopijuokite visą sakinį su netikslumu
+      description: To reikia greitai paieškai dokumente. NEREIKIA, jei yra kokybiška ekrano nuotrauka su pažymėta netikslumo vieta.
+  - type: input
+    id: error
+    attributes:
+      label: Netikslumo tekstas
+  - type: input
+    id: correction
+    attributes:
+      label: Siūlomas taisymo tekstas
+  - type: textarea
+    id: comment
+    attributes:
+      label: Komentaras
+      description: Jei reikia, pateikite papildomos informacijos.
+  - type: dropdown
+    id: teacher
+    attributes:
+      label: Dėstytojas
+      options:
+        - Vilmantas
+        - Rimantė
+        - Justinas
+        - Vita
+        - kitas
+      default: 0
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Patvirtinimas
+      options:
+        - label: Temos pavadinimą pakeičiau ir jame nurodžiau problemos vietą ir esmę.
+          required: true
+        - label: "Apie šią problemą dar niekas nėra pranešęs: esu pirmasis/pirmoji."
