@@ -1,5 +1,5 @@
-name: 05-Netikslumas teste [Vilmanto]
-description: "Informacijos forma. Apie testo klausimą ar netikslumą kreipkitės tiesiai į dėstytoją per „Teams“."
+name: 05-Netikslumas teste [Vilmanto] - rašykite per „Teams“
+description: "Tik informacija: apie netikslumą teste kreipkitės tiesiai į dėstytoją per „Teams“."
 title: '[testas] Netikslumas (žinutę siųsiu dėstytojui)'
 labels: ["Naujas :new:", "Vieta: testai :test_tube:"]
 body:
