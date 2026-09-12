@@ -1,0 +1,49 @@
+name: Papildomų balų registracija
+description: Papildomų balų registracija, kai juos paskiria dėstytojas.
+title: "Papildomi balai (2026-..-..)"
+labels: ["Naujas :new:", "Papildomi balai :star:"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Šią formą reikia pildyti **TIK** tada, kai paprašo dėstytojas.
+
+        Temos pavadinime nurodykite papildomų balų registracijos datą.
+  - type: dropdown
+    id: course
+    attributes:
+      label: Dalykas
+      options:
+        - BS-2026
+        - kitas
+      default: 0
+    validations:
+      required: true
+  - type: dropdown
+    id: teacher
+    attributes:
+      label: Dėstytojas
+      options:
+        - Vilmantas
+        - Rimantė
+        - Justinas
+        - Vita
+        - kitas
+      default: 0
+    validations:
+      required: true
+  - type: input
+    id: date
+    attributes:
+      label: Data
+      description: Pvz., 2026-12-01
+      placeholder: yyyy-mm-dd
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: Už ką skirti balai?
+      description: Atlikta užduotis, atsakytas klausimas ar pan.
+    validations:
+      required: true
