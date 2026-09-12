@@ -1,0 +1,98 @@
+name: Netikslumas pratybų svetainėje [Vilmanto]
+description: Pranešimas apie netikslumą svetainėje mokymai.github.io/pratybos
+title: '[pratybos] netikslumas → taisymas (netikslumo esmė)'
+labels: ["Naujas :new:", "Vieta: pratybų svetainė :globe_with_meridians:"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+          Temos **pavadinime** apibūdinkite netikslumo esmę, kuri padėtų **kitiems** skaitytojams **greitai susiorientuoti**, kad apie šį netikslumą jau pranešta.
+
+          1. Palikite dalį „`[pratybos]`: “;
+          2. Apibūdinkite netikslumo esmę. Jei galima, tokiu formatu: netikslumas → taisymas;
+          Pvz.:
+          „[pratybos] kopppiuteris → kompiuteris (rašyba)“
+          „[pratybos] praleistas žodis "tačiau"“
+  - type: input
+    id: url
+    attributes:
+      label: Nuoroda
+      description: Tiksli nuoroda iš svetainės mokymai.github.io/pratybos/
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Ekrano nuotrauka su pažymėtais netikslumais
+      description: Įkelkite vieną ar kelias ekrano nuotraukas („Screenshot“) su pažymėtais netikslumais. Galite įklijuoti paspausdami Ctrl+V.
+    validations:
+      required: true
+  - type: dropdown
+    id: error-type
+    attributes:
+      label: Netikslumo tipas
+      description: Pasirinkite vieną ar kelis.
+      multiple: true
+      options:
+        - rašyba (praleista raidė ar kt.)
+        - gramatika (nesuderinti linksniai ar kt.)
+        - praleistas žodis 
+        - pasikartojimas (pasikartojantis žodis ar frazė)
+        - skaičiavimo klaida
+        - numeracijos klaida
+        - fakto klaida
+        - netinkamas terminas
+        - skyryba
+        - stilius
+        - kita
+    validations:
+      required: true
+  - type: input
+    id: error-with-context
+    attributes:
+      label: Netikslumo tekstas su keliais žodžiais aplinkui
+      description: To reikia greitai paieškai dokumente.
+  - type: input
+    id: error
+    attributes:
+      label: Netikslumo tekstas
+  - type: input
+    id: correction
+    attributes:
+      label: Siūlomas taisymo tekstas
+  - type: textarea
+    id: comment
+    attributes:
+      label: Komentaras
+      description: Jei reikia, pateikite papildomos informacijos.
+  - type: dropdown
+    id: course
+    attributes:
+      label: Dalykas
+      options:
+        - BS-2026
+        - kitas
+      default: 0
+    validations:
+      required: true
+  - type: dropdown
+    id: teacher
+    attributes:
+      label: Dėstytojas
+      options:
+        - Vilmantas
+        - Rimantė
+        - Justinas
+        - Vita
+        - kitas
+      default: 0
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Patvirtinimas
+      options:
+        - label: Temos pavadinimą pakeičiau ir jame nurodžiau konkrečios problemos esmę.
+          required: true
+        - label: "Apie šią problemą dar niekas nėra pranešęs: esu pirmasis/pirmoji."
